@@ -37,21 +37,34 @@
 - belongs_to :user
 - has_many :products
 
-## product テーブル
+## address テーブル
 
 | Column        | Type       | Options                        |
 | -------       | ---------- | ------------------------------ |
-| product       | string     | null: false                    |
+| address       | string     | null: false                    |
 | post_code     | string     | null: false                    |
 | preficture    | string     | null: false                    |
 | city          | string     | null: false                    |
 | building_name | string     |                                |
 | phone_number  | string     |                                |
-| user          | references | null: false, foreign_key: true |
-| items         | references | null: false, foreign_key: true |
+| purchase      | references | null: false, foreign_key: true |
+
 
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
+## purchase テーブル
+
+ Column         |  Type      | Options                        |
+| -------       | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| item          | references | null: false, foreign_key: true |
+
+### Association
+
+- has_one :address
+- belongs_to :purchase
+
+
