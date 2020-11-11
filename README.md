@@ -20,17 +20,17 @@
 
 
 ## items テーブル
-| Column             | Type       | Options                        |
-| ---------------    | ---------- | ------------------------------ |
-| item_name          | string     | null: false                    |
-| explain            | text       | null: false                    |
-| category           | references | null: false, foreign_key: true |
-| item_condition_id  | integer    | null: false                    |
-| delivery-feed_id   | integer    | null: false                    |
-| shipping_origin    | integer    | null: false                    |
-| day_until_shipping | integer    | null: false                    |
-| price              | integer    | null: false                    |
-| user               | references | null: false, foreign_key: true |
+| Column                | Type       | Options                        |
+| ---------------       | ---------- | ------------------------------ |
+| item_name             | string     | null: false                    |
+| explain               | text       | null: false                    |
+| category_id           | integer    | null: false                    |
+| item_condition_id     | integer    | null: false                    |
+| delivery-feed_id      | integer    | null: false                    |
+| shipping_origin_id    | integer    | null: false                    |
+| day_until_shipping_id | integer    | null: false                    |
+| price                 | integer    | null: false                    |
+| user                  | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -67,7 +67,7 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one :purchase
+- has_one :address
 
 
 
