@@ -7,10 +7,12 @@ class User < ApplicationRecord
          with_options presence: true do
            validates :nickname
            validates :birthday
-           validates :last_name, format: {with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, message: '全角文字を使用してください' }
-           validates :first_name, format: {with: /\A(?:\p{Hiragana}|\p{Katakana}|[ー－]|[一-龠々])+\z/, message: '全角文字を使用してください' }
-           validates :last_name_kana, format: {with: /\A[ァ-ヶー－]+\z/, message: '全角(カタカナ)を使用してください' }
-           validates :first_name_kana, format: {with: /\A[ァ-ヶー－]+\z/, message: '全角(カタカナ)を使用してください' }
+           name_format = /\A[ぁ-んァ-ン一-龥]/
+           validates :last_name, format: {with: name_format, message: '全角文字を使用してください' }
+           validates :first_name, format: {with: name_format, message: '全角文字を使用してください' }
+           name_kana_format = /\A[\p{katakana}\p{blank}ー－]+\z/
+           validates :last_name_kana, format: {with: name_kana_format, message: '全角(カタカナ)を使用してください' }
+           validates :first_name_kana, format: {with: name_kana_format, message: '全角(カタカナ)を使用してください' }
           
          end
          PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
