@@ -23,7 +23,7 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include("Email can't be blank")
       end
-      it "emailに＠が存在する場合登録できない" do
+      it "emailに＠が存在しない場合登録できない" do
         @user.email= "aaabb"
         @user.valid?
         expect(@user.errors.full_messages).to include("Email is invalid")
