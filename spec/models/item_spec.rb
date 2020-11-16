@@ -23,8 +23,13 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include("Explain can't be blank")
       end
-      it "category_idがないと入力できない" do
+      it "category_idないと入力できない" do
         @item.category_id = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category Select")
+      end
+      it "category_idにid:1があると出品できない" do
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category Select")
       end
@@ -33,8 +38,18 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include("Item condition Select")
       end
+      it "item_condition_idにid:1があると出品できない" do
+        @item.item_condition_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Item condition Select")
+      end
       it "delivery_feed_idがないと入力できない" do
         @item.delivery_feed_id = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery feed Select")
+      end
+      it "delivery_feed_idにid:1があると出品できない" do
+        @item.delivery_feed_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery feed Select")
       end
@@ -43,7 +58,17 @@ describe Item do
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping origin Select")
       end
+      it "shipping_origin_idにid:1があると出品できない" do
+        @item.shipping_origin_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Shipping origin Select")
+      end
       it "day_until_shipping_idがないと入力できない" do
+        @item.day_until_shipping_id = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Day until shipping Select")
+      end
+      it "day_until_shipping_idにid:1があると出品できない" do
         @item.day_until_shipping_id = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Day until shipping Select")
