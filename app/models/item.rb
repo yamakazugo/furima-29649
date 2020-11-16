@@ -17,11 +17,13 @@ class Item < ApplicationRecord
   validates :price, numericality: {only_integer: true, message: 'Half-size number' }
   end
   validates :price, inclusion: {in: (300..9999999)}
-  validates :category_id, numericality: { other_than: 1, message: "Select" } 
-  validates :item_condition_id, numericality: { other_than: 1, message: "Select" } 
-  validates :delivery_feed_id, numericality: { other_than: 1, message: "Select" } 
-  validates :shipping_origin_id, numericality: { other_than: 1, message: "Select" } 
-  validates :day_until_shipping_id, numericality: { other_than: 1, message: "Select" } 
-  
+
+  with_options numericality: { other_than: 1, message: "Select" } do
+  validates :category_id 
+  validates :item_condition_id
+  validates :delivery_feed_id
+  validates :shipping_origin_id
+  validates :day_until_shipping_id
+  end
 end
 
