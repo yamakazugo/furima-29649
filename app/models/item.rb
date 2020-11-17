@@ -9,6 +9,8 @@ class Item < ApplicationRecord
   belongs_to_active_hash :shipping_origin
   belongs_to_active_hash :day_until_shipping
 
+  
+
 
   with_options presence: true do
   validates :image
@@ -24,6 +26,12 @@ class Item < ApplicationRecord
   validates :delivery_feed_id
   validates :shipping_origin_id
   validates :day_until_shipping_id
+  end
+
+  validates :content, presence: true, unless: :was_attached?
+
+  def was_attached?
+    self.image.attached?
   end
 end
 
