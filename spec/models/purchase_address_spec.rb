@@ -29,7 +29,7 @@ describe PurchaseAddress do
         expect(@purchase_address.errors.full_messages).to include("Post code Input correctly")
       end
       it "prefecture_idにid:1がある入力できない" do
-        @purchase_address.prefecture_id = 1
+        @purchase_address.prefecture_id = 0
         @purchase_address.valid?
         expect(@purchase_address.errors.full_messages).to include("Prefecture Select")
       end
@@ -54,7 +54,7 @@ describe PurchaseAddress do
         expect(@purchase_address.errors.full_messages).to include("Phone number Input only number")
       end
       it "phone_numberが12桁以上であると入力できない" do
-        @purchase_address.phone_number = "090-12345-67890"
+        @purchase_address.phone_number = "0901234567890"
         @purchase_address.valid?
         expect(@purchase_address.errors.full_messages).to include("Phone number Input only number")
       end

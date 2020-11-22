@@ -1,16 +1,15 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :move_to_index, only: [:index]
+  before_action :set_item, only: [:index, :create]
   
 
 
   def index
-    @item = Item.find(params[:item_id])
     @purchase_address = PurchaseAddress.new
   end  
   
   def create
-   @item = Item.find(params[:item_id])
     @purchase_address = PurchaseAddress.new(address_params)   
      if @purchase_address.valid?
        pay_item
@@ -43,7 +42,9 @@ class PurchasesController < ApplicationController
     end
   end
 
-  
+  def set_item
+    @item = Item.find(params[:item_id])
+  end
 
   
 end
