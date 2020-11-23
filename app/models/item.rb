@@ -28,10 +28,6 @@ class Item < ApplicationRecord
   validates :day_until_shipping_id
   end
 
-  validates :content, presence: true, unless: :was_attached?
-
-  def was_attached?
-    self.image.attached?
-  end
+ 
 end
 
