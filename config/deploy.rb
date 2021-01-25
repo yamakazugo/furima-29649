@@ -1,8 +1,8 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.15.0"
+lock '3.15.0'
 
-set :application, "furima-29649"
-set :repo_url, "git@github.com:yamakazugo/furima-29649.git"
+set :application, 'furima-29649'
+set :repo_url, 'git@github.com:yamakazugo/furima-29649.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
