@@ -29,7 +29,7 @@
 *ユーザー管理機能
 
 
-https://i.gyazo.com/88d7740b6df3a4f1edfebfb61f7d5b9c.gif
+https://i.gyazo.com/88d7740b6df3a4f1edfebfb61f7d5b9c
 
 *商品出品機能
 
