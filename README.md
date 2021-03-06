@@ -1,4 +1,6 @@
-Portforio name:FURINA
+Portforio name: FURIMA
+
+誰でも売りたい商品を投稿し自分の出し値をつける。その投稿した商品を観覧者が購入できる、アプリケーション。
 
 # テーブル設計
 
