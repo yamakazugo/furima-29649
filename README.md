@@ -1,5 +1,5 @@
 # Portfolio name : FURIMA
-![画像名](https://github.com/quin001cunx/newRead/blob/master/FURIMA.png)
+![FURIMA](FURIMA.png)
 誰でも売りたい商品を投稿し自分の出し値をつける。その投稿した商品を観覧者が購入できる、アプリケーションです。
 
 # Url: https://furima-29649.herokuapp.com
