@@ -28,12 +28,15 @@
 
 *ユーザー管理機能
 
-
-https://i.gyazo.com/88d7740b6df3a4f1edfebfb61f7d5b9c
+https://i.gyazo.com/88d7740b6df3a4f1edfebfb61f7d5b9c.gif
 
 *商品出品機能
 
+https://i.gyazo.com/95d67f439ddb8d4e9cda7a104f96df6d.gif
+
 *商品購入機能
+
+https://i.gyazo.com/960db16fd4e3529ecb0383dd9bd877d3.gif
 
 
 # テーブル設計
