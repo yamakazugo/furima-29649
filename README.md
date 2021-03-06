@@ -24,7 +24,7 @@
 
 * Githubリポジトリ: https://github.com/yamakazugo/furima-29649
 
-# Demo
+# Demo(動画)
 
 *ユーザー管理機能
 
