@@ -33,7 +33,7 @@
 
 *商品出品機能
 
-https://i.gyazo.com/95d67f439ddb8d4e9cda7a104f96df6d.gif
+![95d67f439ddb8d4e9cda7a104f96df6d](https://user-images.githubusercontent.com/73051044/110232215-d52c4100-7f5f-11eb-9f89-c9e89a71a1d9.gif)
 
 *商品購入機能
 
