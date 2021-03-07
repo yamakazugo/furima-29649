@@ -28,7 +28,8 @@
 
 *ユーザー管理機能
 
-https://i.gyazo.com/88d7740b6df3a4f1edfebfb61f7d5b9c.gif
+![88d7740b6df3a4f1edfebfb61f7d5b9c](https://user-images.githubusercontent.com/73051044/110232156-7b2b7b80-7f5f-11eb-9532-f3385b805f4c.gif)
+
 
 *商品出品機能
 
