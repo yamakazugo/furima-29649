@@ -37,7 +37,7 @@
 
 *商品購入機能
 
-https://i.gyazo.com/960db16fd4e3529ecb0383dd9bd877d3.gif
+![960db16fd4e3529ecb0383dd9bd877d3](https://user-images.githubusercontent.com/73051044/110232299-32c08d80-7f60-11eb-8ba3-0d8d963561d6.gif)
 
 
 # テーブル設計
